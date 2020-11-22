@@ -1,0 +1,43 @@
+name: portfolio
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  smooth_page_indicator: ^0.2.0
+  animated_text_kit: ^2.4.1
+  flutter_icons: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - images/
+  # example:
+  fonts:
+    - family: Acme
+      fonts:
+        - asset: fonts/Acme-Regular.ttf
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Regular.ttf
+    - family: Kaushan Script
+      fonts:
+        - asset: fonts/KaushanScript-Regular.ttf
