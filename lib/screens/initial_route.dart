@@ -107,11 +107,15 @@ class _MyHomePageState extends State<InitialRoute> {
       drawer: width < 550
           ? Drawer(
               child: SafeArea(
-                child: Column(children: _navActions()),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: _navActions(),
+                ),
               ),
             )
           : null,
-      body: Container(
+      body: 
+      Container(
         child: Stack(
           children: [
             PageView(

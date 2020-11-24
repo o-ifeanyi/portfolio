@@ -45,6 +45,12 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
 
@@ -120,7 +126,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           ? TextAlign.center
                           : TextAlign.start,
                       style: TextStyle(
-                        fontSize: Config.xMargin(context, 2),
+                        fontSize: Config.xMargin(context, 2.5),
                       ),
                     ),
                   ),

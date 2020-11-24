@@ -16,40 +16,53 @@ class ProjectPreview extends StatelessWidget {
   Widget build(BuildContext context) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
-      child: Container(
-        color: Theme.of(context).backgroundColor,
-        child: GridTile(
-          child: Image.asset(
-            project.image,
-            fit: BoxFit.cover,
-            alignment: Alignment.center,
-          ),
-          footer: GridTileBar(
-            backgroundColor: Colors.black.withOpacity(0.6),
-            title: Text(
-              project.title,
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: Config.xMargin(context, 4),
-                fontWeight: FontWeight.w900,
-                fontFamily: 'Poppins Bold',
-              ),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(20),
+        onTap: () {
+          html.window.open(project.link, '');
+        },
+        child: Container(
+          color: Theme.of(context).backgroundColor,
+          child: GridTile(
+            child: Image.asset(
+              project.image,
+              fit: BoxFit.cover,
+              alignment: Alignment.center,
             ),
-            subtitle: Text(
-              project.description,
-              style: TextStyle(fontSize: Config.xMargin(context, 1.7)),
-              softWrap: true,
-              maxLines: 2,
-            ),
-            trailing: FlatButton.icon(
-              label: Text('GitHub'),
-              icon: Icon(
-                FontAwesome.github,
-                size: Config.xMargin(context, 5),
+            footer: GridTileBar(
+              backgroundColor: Colors.black.withOpacity(0.6),
+              title: Text(
+                project.title,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: Config.xMargin(context, 4),
+                  fontWeight: FontWeight.w900,
+                  fontFamily: 'Poppins Bold',
+                ),
               ),
-              onPressed: () {
-                html.window.open(project.link, '');
-              },
+              subtitle: Expanded(
+                child: SingleChildScrollView(
+                  child: Text(
+                    project.description,
+                    style: TextStyle(
+                      fontSize: Config.xMargin(context, 2.3),
+                      height: 1.0,
+                    ),
+                    softWrap: true,
+                    maxLines: 4,
+                  ),
+                ),
+              ),
+              trailing: FlatButton.icon(
+                label: Text('GitHub'),
+                icon: Icon(
+                  FontAwesome.github,
+                  size: Config.xMargin(context, 5),
+                ),
+                onPressed: () {
+                  html.window.open(project.link, '');
+                },
+              ),
             ),
           ),
         ),

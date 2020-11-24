@@ -35,7 +35,7 @@ class AboutMe extends StatelessWidget {
                 softWrap: true,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: Config.xMargin(context, 2),
+                  fontSize: Config.xMargin(context, 2.5),
                 ),
               ),
             ),
@@ -115,7 +115,7 @@ class AboutMe extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white54,
-                            fontSize: Config.xMargin(context, 2),
+                            fontSize: Config.xMargin(context, 2.5),
                           ),
                         ),
                       ],

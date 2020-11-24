@@ -29,7 +29,7 @@ class RoundedButton extends StatelessWidget {
           child: Text(
             text,
             style: TextStyle(
-              fontSize: Config.xMargin(context, 2.5),
+              fontSize: Config.xMargin(context, 3),
             ),
           ),
           onPressed: callBack,
